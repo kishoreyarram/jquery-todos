@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Jquery</title>
+  <!-- bower:css -->
+  <!-- endbower -->
+
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/styles/styles.css">
+  <!-- endinject -->
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <h1>Todos</h1>
+      <input id="todo-input" type="text" placeholder="What has to be done?" />
+    </header>
+    <section id="main">
+      <ul id="todo-list"></ul>
+    </section>
+    <script id="todo-items" type="text/x-handlebars-template">
+      {{#this}}
+      <li class="todo-item {{#if completed}}complete{{/if}}" data-id="{{id}}">
+        <div class="view">
+          <input class="toggle" type="checkbox" {{#if completed}}checked{{/if}} />
+          <label>{{name}}</label>
+          <button type="button">X</button>
+        </div>
+        <input class="edit" type="text" value="{{name}}" />
+      </li>
+      {{/this}}
+    </script>
+  </div>
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/handlebars/handlebars.js"></script>
+  <!-- endbower -->
+
+  <!-- inject:js -->
+  <script src="/scripts/app.js"></script>
+  <!-- endinject -->
+</body>
+</html>
