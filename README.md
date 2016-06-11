@@ -1,2 +1,2 @@
 # example-todos-jquery
-Simple todos list using jquery
+Example to do the application using jquery
