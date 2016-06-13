@@ -1,0 +1,106 @@
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+#wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+
+#main {
+  display: none;
+}
+
+#todo-input {
+  width: 100%;
+  margin: 0;
+  padding: 16px 20px;
+  border: 1px #ccc solid;
+  outline: 0;
+}
+
+#todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-left: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+  border-bottom: 1px #ccc solid;
+}
+
+
+#todo-list li {
+  border-bottom: 1px #ccc solid;
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    .view {
+      button {
+        display: inline;
+      }
+    }
+  }
+
+  .view, .edit {
+    padding: 12px 20px;
+  }
+  .edit {
+    width: 100%;
+    border: none;
+    outline: none;
+    display: none;
+  }
+  .view {
+    position: relative;
+    .toggle {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 16px;
+      left: 16px;
+    }
+    label {
+      margin: 0;
+      padding-left: 20px;
+      display: inline-block;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    button {
+      margin: 0;
+      padding: 0 4px;
+      float: right;
+      display: none;
+    }
+  }
+  &.active {
+    .view {
+      display: none;
+    }
+    .edit {
+      background-color: #ffa;
+      display: block;
+    }
+  }
+  &.complete {
+    label {
+      text-decoration: line-through;
+    }
+  }
+}
+
+
