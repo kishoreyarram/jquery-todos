@@ -1,0 +1,17 @@
+{
+  "name": "project-todos",
+  "private": true,
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "handlebars": "^4.0.5",
+    "bootstrap-sass": "^3.3.6"
+  },
+  "overrides": {
+    "boostrap-sass": {
+      "main": [
+        "assets/stylesheets/_boostrap.scss",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
+  }
+}
